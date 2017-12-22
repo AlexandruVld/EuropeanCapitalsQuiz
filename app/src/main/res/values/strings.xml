@@ -1,0 +1,58 @@
+<resources>
+    <!--Main Activity strings-->
+    <string name="app_name">European Capitals Quiz</string>
+    <string name="wellcome">European Capitals Quiz</string>
+    <string name="name_input">Please fill your name in the field bellow!</string>
+    <string name="hint">Name</string>
+    <string name="spinner">Choose continent to start quiz</string>
+
+
+    <!--Quiz Activity strings-->
+    <string name="capital_for_albania">What\'s the capital of Albania?</string>
+    <string name="albania_answer_1">Zagreb</string>
+    <string name="albania_answer_2">Tirana</string>
+    <string name="albania_answer_3">Tibilisi</string>
+    <string name="capital_for_iceland">What\'s the capital of Iceland?</string>
+    <string name="iceland_answer_1">Stockholm</string>
+    <string name="iceland_answer_2">Helsinki</string>
+    <string name="iceland_answer_3">Reykjavik</string>
+    <string name="capital_for_slovakia">What\'s the capital for Slovakia?</string>
+    <string name="slovakia_answer_1">Bratislava</string>
+    <string name="slovakia_answer_2">Ljubljana</string>
+    <string name="slovakia_answer_3">Belgrade</string>
+    <string name="answer_c">Answer C</string>
+
+    <!--Quiz Activity Easy strings-->
+    <string name="capital_for_france">What is the capital of France?</string>
+    <string name="france_answer_1">Paris</string>
+    <string name="france_answer_2">Bucharest</string>
+    <string name="france_answer_3">Prague</string>
+    <string name="capital_for_germany">What is the capital of Germany?</string>
+    <string name="germany_answer_1">Dublin</string>
+    <string name="germany_answer_2">Berlin</string>
+    <string name="germany_answer_3">Rome</string>
+    <string name="capital_for_uk">What is the capital of England?</string>
+    <string name="uk_answer_1">Athens</string>
+    <string name="uk_answer_2">Madrid</string>
+    <string name="uk_answer_3">London</string>
+
+    <!--Button strings-->
+    <string name="start">Start quiz</string>
+    <string name="submit">Submit</string>
+
+    <!--Toast messages-->
+    <string name="heavy_stuff">Since you are a European we\'ll go for the heavy stuff!</string>
+    <string name="easy">I\'ll go easy on you!</string>
+    <string name="won">Hurray!!! You\'ve won!</string>
+    <string name="loose"> Hmmmm!!! In seems that you live on a different continent!</string>
+
+    <!--Continents-->
+    <string name="select">Select</string>
+    <string name="cont_eu">Europe</string>
+    <string name="cont_asia">Asia</string>
+    <string name="cont_nam">Northern America</string>
+    <string name="cont_sam">Southern America</string>
+    <string name="cont_af">Africa</string>
+    <string name="cont_aus">Australia</string>
+
+</resources>

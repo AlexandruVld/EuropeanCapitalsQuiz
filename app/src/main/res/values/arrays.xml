@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="continents_array">
+        <item>@string/select</item>
+        <item>@string/cont_eu</item>
+        <item>@string/cont_asia</item>
+        <item>@string/cont_nam</item>
+        <item>@string/cont_sam</item>
+        <item>@string/cont_af</item>
+        <item>@string/cont_aus</item>
+    </string-array>
+</resources>

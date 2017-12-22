@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimen for Activity Main-->
+    <dimen name="top_dp">30dp</dimen>
+    <dimen name="bottom_dp">24dp</dimen>
+    <dimen name="text_title">60sp</dimen>
+    <dimen name="text_second_title">36sp</dimen>
+    <dimen name="spiner_height">50dp</dimen>
+    <!--Dimen for Quiz Activity-->
+    <dimen name="text">24sp</dimen>
+    <dimen name="left_question">20dp</dimen>
+    <dimen name="left_answer">36dp</dimen>
+    <dimen name="top_dimen">16dp</dimen>
+
+</resources>
