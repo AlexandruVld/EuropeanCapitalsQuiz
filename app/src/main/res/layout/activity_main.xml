@@ -42,8 +42,8 @@
             android:layout_marginTop="@dimen/top_dp"
             android:entries="@array/continents_array">
 
-        </Spinner>
 
+        </Spinner>
 
     </LinearLayout>
 

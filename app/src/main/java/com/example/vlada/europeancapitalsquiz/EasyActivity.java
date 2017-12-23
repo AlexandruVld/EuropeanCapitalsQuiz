@@ -51,7 +51,7 @@ public class EasyActivity extends AppCompatActivity {
         }
         //displays this toast if the user's score is bellow 3 points
         else {
-            Toast.makeText(this, getString(R.string.loose),
+            Toast.makeText(this, getString(R.string.loose_easy),
                     Toast.LENGTH_LONG).show();
         }
     }

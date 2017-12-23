@@ -4,7 +4,7 @@
     <string name="wellcome">European Capitals Quiz</string>
     <string name="name_input">Please fill your name in the field bellow!</string>
     <string name="hint">Name</string>
-    <string name="spinner">Choose continent to start quiz</string>
+    <string name="spinner">Choose the continent that you live on</string>
 
 
     <!--Quiz Activity strings-->
@@ -43,8 +43,9 @@
     <!--Toast messages-->
     <string name="heavy_stuff">Since you are a European we\'ll go for the heavy stuff!</string>
     <string name="easy">I\'ll go easy on you!</string>
-    <string name="won">Hurray!!! You\'ve won!</string>
+    <string name="won">Hurray!!! You\'ve scored 3/3!</string>
     <string name="loose"> Hmmmm!!! In seems that you live on a different continent!</string>
+    <string name="loose_easy">Hmmmm!!! Because you\'re not from Europe i\'ll let you try again!</string>
 
     <!--Continents-->
     <string name="select">Select</string>
