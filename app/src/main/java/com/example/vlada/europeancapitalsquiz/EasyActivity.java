@@ -1,10 +1,13 @@
 package com.example.vlada.europeancapitalsquiz;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.Toast;
 
 public class EasyActivity extends AppCompatActivity {
 
@@ -13,24 +16,32 @@ public class EasyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy);
-    }
+        final EditText name = (EditText) findViewById(R.id.name_input);
+        Button btnSubmit = (Button) findViewById(R.id.btnSubmit);
 
-    //This method is called when the submit button is clicked
-    public void submitAnswers (View view){
+        btnSubmit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                int finalScore = calculatePoints();
 
-        int finalScore = calculatePoints();
+                if (finalScore == 4) {
+                    Intent intent = new Intent(EasyActivity.this, WinActivity.class);
+                    intent.putExtra("name", name.getText().toString());
+                    startActivity(intent);
 
-        //displays this toast if the user acumulated 3 points
-        if (finalScore == 3){
-            Toast.makeText(this, getString(R.string.won),
-                    Toast.LENGTH_LONG).show();
 
-        }
-        //displays this toast if the user's score is bellow 3 points
-        else {
-            Toast.makeText(this, getString(R.string.loose_easy),
-                    Toast.LENGTH_LONG).show();
-        }
+                }
+                //displays this toast if the user's score is bellow 3 points
+                else {
+                    Intent intent = new Intent(EasyActivity.this, LooseActivity.class);
+                    intent.putExtra("name", name.getText().toString());
+                    startActivity(intent);
+
+                }
+
+            }
+        });
+
     }
 
 
@@ -43,6 +54,12 @@ public class EasyActivity extends AppCompatActivity {
 
         //initial value of the points
         int score = 0;
+
+        if ((((CheckBox)findViewById(R.id.countries)).isChecked()) &&
+                (((CheckBox)findViewById(R.id.economy)).isChecked()) &&
+                (((CheckBox)findViewById(R.id.smallest)).isChecked())) {
+            score += 1;
+        }
 
         //checks if the user answered correct the first question
         if (((RadioButton)findViewById(R.id.france_paris)).isChecked()) {

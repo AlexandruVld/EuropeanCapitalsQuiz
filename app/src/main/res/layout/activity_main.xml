@@ -34,6 +34,7 @@
             android:textColor="@color/text"
             android:textSize="@dimen/text_second_title" />
 
+
         <Spinner
             android:id="@+id/continents_spinner"
             android:layout_width="wrap_content"

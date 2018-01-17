@@ -11,5 +11,6 @@
     <dimen name="left_question">20dp</dimen>
     <dimen name="left_answer">36dp</dimen>
     <dimen name="top_dimen">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>
