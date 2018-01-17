@@ -23,6 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_dimen"
                 android:gravity="center_horizontal"
+                android:inputType="textCapWords"
                 android:hint="@string/name_input"
                 android:textColorHint="@color/text"/>
 
