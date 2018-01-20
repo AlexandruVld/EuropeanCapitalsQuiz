@@ -24,6 +24,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v){
                 int finalScore = calculatePoints();
 
+                //starts WinActivity if the user scored 4 points and sends the user name
                 if (finalScore == 4) {
                     Intent intent = new Intent(EasyActivity.this, WinActivity.class);
                     intent.putExtra("name", name.getText().toString());
@@ -31,7 +32,7 @@ public class EasyActivity extends AppCompatActivity {
 
 
                 }
-                //displays this toast if the user's score is bellow 3 points
+                //starts LooseActivity if the user scored bellow 4 points and sends the user name
                 else {
                     Intent intent = new Intent(EasyActivity.this, LooseActivity.class);
                     intent.putExtra("name", name.getText().toString());
@@ -45,33 +46,35 @@ public class EasyActivity extends AppCompatActivity {
     }
 
 
-    /*@param checkedReykjavik is wether the user checked the corect answer
-     *@param checkedTirana is wether the user checked the corect answer
-     *@param checkedBratislava is wether the user checked the corect answer
+    /*@param checkedParis is wether the user checked the corect answer
+     *@param checkedBerlin is wether the user checked the corect answer
+     *@param checkedLondon is wether the user checked the corect answer
     */
 
+    //calculate the points that user scored
     public int calculatePoints () {
 
         //initial value of the points
         int score = 0;
 
+        //checks if the user selected the corect statements from the first question set
         if ((((CheckBox)findViewById(R.id.countries)).isChecked()) &&
                 (((CheckBox)findViewById(R.id.economy)).isChecked()) &&
                 (((CheckBox)findViewById(R.id.smallest)).isChecked())) {
             score += 1;
         }
 
-        //checks if the user answered correct the first question
+        //checks if the user answered correct the second question
         if (((RadioButton)findViewById(R.id.france_paris)).isChecked()) {
             score += 1;
         }
 
-        //checks if the user answered correct the second question
+        //checks if the user answered correct the third question
         if (((RadioButton)findViewById(R.id.germany_berlin)).isChecked()) {
             score += 1;
         }
 
-        //checks if the user answered correct the third question
+        //checks if the user answered correct the forth question
         if (((RadioButton)findViewById(R.id.england_london)).isChecked()){
             score += 1;
         }

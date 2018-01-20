@@ -24,6 +24,7 @@
                 android:layout_marginTop="@dimen/top_dimen"
                 android:gravity="center_horizontal"
                 android:inputType="textCapWords"
+                android:imeOptions="actionDone"
                 android:hint="@string/name_input"
                 android:textColorHint="@color/text"/>
 

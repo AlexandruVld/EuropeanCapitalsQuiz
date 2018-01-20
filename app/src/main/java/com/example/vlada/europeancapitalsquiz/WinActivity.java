@@ -15,6 +15,7 @@ public class WinActivity extends AppCompatActivity {
         TextView ending = (TextView)findViewById(R.id.receiveName);
         Bundle bundle = getIntent().getExtras();
 
+        //gets the user name from the quiz activities
         if(bundle != null) {
             String data = bundle.getString("name");
             ending.setText(data);
@@ -22,6 +23,7 @@ public class WinActivity extends AppCompatActivity {
 
     }
 
+    //when restart button is clicked the app returns to the MainActivity
     public void reset (View view){
         final Intent intent;
         intent = new Intent(WinActivity.this, MainActivity.class);

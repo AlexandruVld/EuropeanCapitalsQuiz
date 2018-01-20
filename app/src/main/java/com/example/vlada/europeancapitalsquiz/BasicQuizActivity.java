@@ -24,6 +24,7 @@ public class BasicQuizActivity extends AppCompatActivity {
             public void onClick(View v){
                 int finalScore = calculatePoints();
 
+                //starts WinActivity if the user scores 4 points
                 if (finalScore == 4) {
                 Intent intent = new Intent(BasicQuizActivity.this, WinActivity.class);
                 intent.putExtra("name", name.getText().toString());
@@ -31,7 +32,7 @@ public class BasicQuizActivity extends AppCompatActivity {
 
 
             }
-            //displays this toast if the user's score is bellow 3 points
+            //starts LooseActivity if the user scored below 4 points
             else {
                 Intent intent = new Intent(BasicQuizActivity.this, LooseActivity.class);
                 intent.putExtra("name", name.getText().toString());
