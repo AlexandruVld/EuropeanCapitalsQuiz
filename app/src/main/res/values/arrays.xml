@@ -3,10 +3,6 @@
     <string-array name="continents_array">
         <item>@string/select</item>
         <item>@string/cont_eu</item>
-        <item>@string/cont_asia</item>
-        <item>@string/cont_nam</item>
-        <item>@string/cont_sam</item>
-        <item>@string/cont_af</item>
-        <item>@string/cont_aus</item>
+        <item>@string/world</item>
     </string-array>
 </resources>

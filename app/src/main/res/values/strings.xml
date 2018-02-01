@@ -1,13 +1,15 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--Main Activity strings-->
     <string name="app_name">European Capitals Quiz</string>
     <string name="wellcome">European Capitals Quiz</string>
     <string name="name_input">Please fill in your name!</string>
     <string name="hint">Name</string>
+    <string name="please_select">Plese select your location!</string>
     <string name="spinner">Choose the continent that you live on</string>
 
 
     <!--Activity Basic Quiz strings-->
+    <string name="smallest_state">What\'s the name of the smallest country in Europe?</string>
     <string name="true_statement">Which of the following statements are true?</string>
     <string name="wine">Europe Makes 44% of the World\’s Wine</string>
     <string name="empires">World War I Ended Four European Empires</string>
@@ -28,6 +30,7 @@
     <string name="answer_c">Answer C</string>
 
     <!--Quiz Activity Easy strings-->
+    <string name="european_parliament">Which capital is home of the European Parlament?</string>
     <string name="christian">Europe Has a Hindu Majority</string>
     <string name="countries">There Are 50 Countries in Europe</string>
     <string name="economy">Europe Has the World\’s Richest Economy</string>
@@ -46,8 +49,8 @@
     <string name="uk_answer_3">London</string>
 
     <!--Win & Loose Ativity strings-->
-    <string name="win">Congratulations! You scored 4/4</string>
-    <string name="looser">Don\'t be sad! Better luck next time!</string>
+    <string name="win">Congratulation!</string>
+    <string name="loser">Better luck next time!</string>
     <string name="restart">Restart</string>
 
     <!--Button strings-->
@@ -57,18 +60,19 @@
     <!--Toast messages-->
     <string name="heavy_stuff">Since you are a European we\'ll go for the heavy stuff!</string>
     <string name="easy">I\'ll go easy on you!</string>
-    <string name="won">Hurray!!! You\'ve scored 4/4!</string>
-    <string name="loose"> Hmmmm!!! In seems that you live on a different continent!</string>
-    <string name="loose_easy">Hmmmm!!! Because you\'re not from Europe i\'ll let you try again!</string>
+    <string name="result">On a scale of 1 to 5 you scored: <xliff:g id="finalScore" example="1">%d</xliff:g>!</string>
+
+
 
     <!--Continents-->
     <string name="select">Select</string>
     <string name="cont_eu">Europe</string>
-    <string name="cont_asia">Asia</string>
-    <string name="cont_nam">Northern America</string>
-    <string name="cont_sam">Southern America</string>
-    <string name="cont_af">Africa</string>
-    <string name="cont_aus">Australia</string>
+    <string name="world">Rest of the world</string>
     <string name="title_activity_win">WinActivity</string>
+
+    <!--Answers hint-->
+    <string name="answer">Please fill your answer here!</string>
+    <string name="easy_answer">Brussels </string>
+    <string name="basic_answer">Vatican</string>
 
 </resources>

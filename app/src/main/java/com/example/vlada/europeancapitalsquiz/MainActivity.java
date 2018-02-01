@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -25,42 +26,31 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //Performing action onItemSelected and onNothing selected
     @Override
-    public void onItemSelected(AdapterView<?> arg0, View arg1,int position, long row_id) {
-    //Defines which activity starts acording to what the user is selecting
-        final Intent intent;
-        switch(position) {
-            case 1:
-                Toast.makeText(this, getString(R.string.heavy_stuff),Toast.LENGTH_LONG).show();
-                intent = new Intent(MainActivity.this, BasicQuizActivity.class);
-                startActivity(intent);
-                break;
-            case 2:
-                Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
-                intent = new Intent(MainActivity.this, EasyActivity.class);
-                startActivity(intent);
-                break;
-            case 3:
-                Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
-                intent = new Intent(MainActivity.this, EasyActivity.class);
-                startActivity(intent);
-                break;
-            case 4:
-                Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
-                intent = new Intent(MainActivity.this, EasyActivity.class);
-                startActivity(intent);
-                break;
-            case 5:
-                Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
-                intent = new Intent(MainActivity.this, EasyActivity.class);
-                startActivity(intent);
-                break;
-            case 6:
-                Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
-                intent = new Intent(MainActivity.this, EasyActivity.class);
-                startActivity(intent);
-                break;
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long row_id) {
+        //Defines which activity starts according to what the user is selecting
+            EditText name = (EditText)findViewById(R.id.name_input);
 
-        }
+            Intent intent;
+            switch (position) {
+                case 1:
+                    Toast.makeText(this, getString(R.string.heavy_stuff), Toast.LENGTH_LONG).show();
+                    intent = new Intent(MainActivity.this, QuizActivity.class);
+                    intent.putExtra("layout", R.layout.activity_basic_quiz);
+                    intent.putExtra("name", name.getText().toString());
+                    startActivity(intent);
+                    break;
+
+                case 2:
+                    Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
+                    intent = new Intent(MainActivity.this, QuizActivity.class);
+                    intent.putExtra("layout", R.layout.activity_easy);
+                    intent.putExtra("name", name.getText().toString());
+                    startActivity(intent);
+                    break;
+                default:
+                    Toast.makeText(this, getString(R.string.please_select), Toast.LENGTH_LONG).show();
+                    break;
+            }
 
 
     }

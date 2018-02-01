@@ -19,13 +19,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BasicQuizActivity"
+            android:name=".QuizActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity
-            android:name=".EasyActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity android:name=".WinActivity" />
-        <activity android:name=".LooseActivity"></activity>
+        <activity android:name=".EndingActivity" />
     </application>
 
 </manifest>

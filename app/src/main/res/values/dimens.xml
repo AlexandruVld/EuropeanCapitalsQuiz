@@ -8,9 +8,11 @@
     <dimen name="spiner_height">50dp</dimen>
     <!--Dimen for Quiz Activity-->
     <dimen name="text">24sp</dimen>
-    <dimen name="left_question">20dp</dimen>
+    <dimen name="left_indent">20dp</dimen>
     <dimen name="left_answer">36dp</dimen>
     <dimen name="top_dimen">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <!--Dimen for button-->
+    <dimen name="width">299dp</dimen>
 
 </resources>

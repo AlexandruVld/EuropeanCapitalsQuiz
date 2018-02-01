@@ -5,227 +5,248 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/question_mark_scratching_head"
-    tools:context="com.example.vlada.europeancapitalsquiz.EasyActivity">
+    tools:context="com.example.vlada.europeancapitalsquiz.EndingActivity">
 
     <LinearLayout
+        android:id="@+id/parent_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/background"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_dimen"
+            android:layout_marginLeft="@dimen/left_indent"
+            android:layout_marginRight="@dimen/left_indent"
+            android:text="@string/european_parliament"
+            android:textSize="@dimen/text"
+            android:gravity="center_horizontal"
+            android:textColor="@color/text"/>
 
-        <RelativeLayout
+        <EditText
+            android:id="@+id/answer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_dimen"
+            android:layout_marginLeft="@dimen/left_indent"
+            android:layout_marginRight="@dimen/left_indent"
+            android:gravity="center_horizontal"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone"
+            android:hint="@string/answer"
+            android:textColorHint="@color/text"/>
 
-            <EditText
-                android:id="@+id/name_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_dimen"
-                android:gravity="center_horizontal"
-                android:hint="@string/name_input"
-                android:imeOptions="actionDone"
-                android:inputType="textCapWords"
-                android:textColorHint="@color/text" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_indent"
+            android:layout_marginRight="@dimen/left_indent"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/statement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/name_input"
-                android:layout_marginLeft="@dimen/left_question"
                 android:layout_marginTop="@dimen/top_dimen"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/true_statement"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
 
-            <CheckBox
-                android:id="@+id/countries"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/statement"
-                android:layout_marginLeft="@dimen/left_answer"
-                android:layout_marginTop="@dimen/top_dimen"
-                android:paddingLeft="@dimen/left_question"
-                android:text="@string/countries"
-                android:textSize="@dimen/text" />
+                android:layout_marginLeft="@dimen/left_indent"
+                android:layout_marginRight="@dimen/left_indent"
+                android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/smallest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/countries"
-                android:layout_marginLeft="@dimen/left_answer"
-                android:paddingLeft="@dimen/left_question"
-                android:text="@string/smallest"
-                android:textSize="@dimen/text" />
+                <CheckBox
+                    android:id="@+id/countries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_dimen"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/countries"
+                    android:textSize="@dimen/text" />
 
-            <CheckBox
-                android:id="@+id/economy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/smallest"
-                android:layout_marginLeft="@dimen/left_answer"
-                android:paddingLeft="@dimen/left_question"
-                android:text="@string/economy"
-                android:textSize="@dimen/text" />
+                <CheckBox
+                    android:id="@+id/smallest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/smallest"
+                    android:textSize="@dimen/text" />
 
-            <CheckBox
-                android:id="@+id/christian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/economy"
-                android:layout_marginLeft="@dimen/left_answer"
-                android:paddingLeft="@dimen/left_question"
-                android:text="@string/christian"
-                android:textSize="@dimen/text" />
+                <CheckBox
+                    android:id="@+id/economy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/economy"
+                    android:textSize="@dimen/text" />
+
+                <CheckBox
+                    android:id="@+id/christian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/christian"
+                    android:textSize="@dimen/text" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/albania"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/christian"
-                android:layout_marginLeft="@dimen/left_question"
                 android:layout_marginTop="@dimen/top_dimen"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/capital_for_france"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
 
-            <RadioGroup
-                android:id="@+id/albania_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/albania"
-                android:layout_marginTop="@dimen/top_dimen">
-
-                <RadioButton
-                    android:id="@+id/france_paris"
+                <RadioGroup
+                    android:id="@+id/albania_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/france_answer_1"
-                    android:textSize="@dimen/text" />
+                    android:layout_marginTop="@dimen/top_dimen"
+                    android:layout_marginLeft="@dimen/left_indent"
+                    android:layout_marginRight="@dimen/left_indent">
 
-                <RadioButton
-                    android:id="@+id/france_bucharest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/france_answer_2"
-                    android:textSize="@dimen/text" />
+                    <RadioButton
+                        android:id="@+id/france_paris"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/france_answer_1"
+                        android:textSize="@dimen/text" />
 
-                <RadioButton
-                    android:id="@+id/france_prague"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/france_answer_3"
-                    android:textSize="@dimen/text" />
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/france_bucharest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/france_answer_2"
+                        android:textSize="@dimen/text" />
+
+                    <RadioButton
+                        android:id="@+id/france_prague"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/france_answer_3"
+                        android:textSize="@dimen/text" />
+                </RadioGroup>
 
             <TextView
                 android:id="@+id/iceland"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/albania_answers"
-                android:layout_marginLeft="@dimen/left_question"
                 android:layout_marginTop="@dimen/top_dimen"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/capital_for_germany"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
 
-            <RadioGroup
-                android:id="@+id/iceland_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iceland"
-                android:layout_marginTop="@dimen/top_dimen">
-
-                <RadioButton
-                    android:id="@+id/germany_dublin"
+                <RadioGroup
+                    android:id="@+id/germany_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/germany_answer_1"
-                    android:textSize="@dimen/text" />
+                    android:layout_marginTop="@dimen/top_dimen"
+                    android:layout_marginLeft="@dimen/left_indent"
+                    android:layout_marginRight="@dimen/left_indent">
 
-                <RadioButton
-                    android:id="@+id/germany_berlin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/germany_answer_2"
-                    android:textSize="@dimen/text" />
+                    <RadioButton
+                        android:id="@+id/germany_dublin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/germany_answer_1"
+                        android:textSize="@dimen/text" />
 
-                <RadioButton
-                    android:id="@+id/germany_rome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/germany_answer_3"
-                    android:textSize="@dimen/text" />
+                    <RadioButton
+                        android:id="@+id/germany_berlin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/germany_answer_2"
+                        android:textSize="@dimen/text" />
 
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/germany_rome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/germany_answer_3"
+                        android:textSize="@dimen/text" />
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/slovakia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/iceland_answers"
-                android:layout_marginLeft="@dimen/left_question"
                 android:layout_marginTop="@dimen/top_dimen"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/capital_for_uk"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
 
-            <RadioGroup
-                android:id="@+id/uk_answers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/slovakia"
-                android:layout_marginTop="@dimen/top_dimen">
-
-                <RadioButton
-                    android:id="@+id/england_athens"
+                <RadioGroup
+                    android:id="@+id/uk_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/uk_answer_1"
-                    android:textSize="@dimen/text" />
+                    android:layout_marginTop="@dimen/top_dimen"
+                    android:layout_marginLeft="@dimen/left_indent"
+                    android:layout_marginRight="@dimen/left_indent">
 
-                <RadioButton
-                    android:id="@+id/england_madrid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/uk_answer_2"
-                    android:textSize="@dimen/text" />
+                    <RadioButton
+                        android:id="@+id/england_athens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/uk_answer_1"
+                        android:textSize="@dimen/text" />
 
-                <RadioButton
-                    android:id="@+id/england_london"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/left_answer"
-                    android:paddingLeft="@dimen/left_question"
-                    android:text="@string/uk_answer_3"
-                    android:textSize="@dimen/text" />
+                    <RadioButton
+                        android:id="@+id/england_madrid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/uk_answer_2"
+                        android:textSize="@dimen/text" />
 
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/england_london"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/left_indent"
+                        android:paddingRight="@dimen/left_indent"
+                        android:text="@string/uk_answer_3"
+                        android:textSize="@dimen/text" />
 
-        </RelativeLayout>
+                </RadioGroup>
 
         <Button
             android:id="@+id/btnSubmit"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/width"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/bottom_dp"

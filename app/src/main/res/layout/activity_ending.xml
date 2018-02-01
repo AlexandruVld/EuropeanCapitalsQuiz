@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vlada.europeancapitalsquiz.WinActivity">
+    tools:context="com.example.vlada.europeancapitalsquiz.EndingActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,17 +16,19 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/loose"
+                android:id="@+id/win"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/looser" />
+                android:layout_marginTop="@dimen/top_dimen"
+                android:scaleType="center"
+                android:src="@drawable/winner" />
 
             <TextView
                 android:id="@+id/receiveName"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/loose"
+                android:layout_below="@id/win"
                 android:layout_marginTop="@dimen/top_dp"
                 android:text=""
                 android:textColor="@color/text"
@@ -38,10 +40,21 @@
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_below="@id/receiveName"
                 android:layout_marginTop="@dimen/top_dp"
-                android:text="@string/looser"
+                android:text=""
+                android:textColor="@color/text"
+                android:textSize="@dimen/text" />
+
+            <TextView
+                android:id="@+id/percent"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/ending"
+                android:layout_marginTop="@dimen/top_dp"
+                android:text=""
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
 

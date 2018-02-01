@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/europe"
-    android:backgroundTint="@color/colorAccent"
     tools:context="com.example.vlada.europeancapitalsquiz.MainActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/left_indent"
+        android:layout_marginRight="@dimen/left_indent"
         android:orientation="vertical">
 
         <TextView
@@ -23,13 +24,25 @@
             android:textColor="@color/text"
             android:textSize="@dimen/text_title" />
 
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_dimen"
+            android:layout_marginLeft="@dimen/left_indent"
+            android:layout_marginRight="@dimen/left_indent"
+            android:gravity="center_horizontal"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone"
+            android:hint="@string/name_input"
+            android:textColorHint="@color/text"/>
+
         <TextView
             android:id="@+id/continent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/top_dp"
-            android:text="@string/spinner"
+            android:text="@string/please_select"
             android:textAlignment="center"
             android:textColor="@color/text"
             android:textSize="@dimen/text_second_title" />
