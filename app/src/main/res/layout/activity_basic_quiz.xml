@@ -9,95 +9,95 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/background">
+        android:background="@color/background"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/top_dimen"
             android:layout_marginLeft="@dimen/left_indent"
             android:layout_marginRight="@dimen/left_indent"
-            android:text="@string/smallest_state"
-            android:textSize="@dimen/text"
+            android:layout_marginTop="@dimen/top_dimen"
             android:gravity="center_horizontal"
-            android:textColor="@color/text"/>
+            android:text="@string/smallest_state"
+            android:textColor="@color/text"
+            android:textSize="@dimen/text" />
 
         <EditText
             android:id="@+id/answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/top_dimen"
             android:layout_marginLeft="@dimen/left_indent"
             android:layout_marginRight="@dimen/left_indent"
+            android:layout_marginTop="@dimen/top_dimen"
             android:gravity="center_horizontal"
-            android:inputType="textCapWords"
-            android:imeOptions="actionDone"
             android:hint="@string/answer"
-            android:textColorHint="@color/text"/>
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:textColorHint="@color/text" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginLeft="@dimen/left_indent"
-            android:layout_marginRight="@dimen/left_indent">
+            android:layout_marginRight="@dimen/left_indent"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/statement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_dimen"
-                android:text="@string/true_statement"
-                android:textSize="@dimen/text"
                 android:gravity="center_horizontal"
-                android:textColor="@color/text"/>
+                android:text="@string/true_statement"
+                android:textColor="@color/text"
+                android:textSize="@dimen/text" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginLeft="@dimen/left_indent"
-                android:layout_marginRight="@dimen/left_indent">
+                android:layout_marginRight="@dimen/left_indent"
+                android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_dimen"
-                android:paddingLeft="@dimen/left_indent"
-                android:paddingRight="@dimen/left_indent"
-                android:text="@string/name"
-                android:textSize="@dimen/text" />
+                <CheckBox
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_dimen"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/name"
+                    android:textSize="@dimen/text" />
 
-            <CheckBox
-                android:id="@+id/wine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/left_indent"
-                android:paddingRight="@dimen/left_indent"
-                android:text="@string/wine"
-                android:textSize="@dimen/text"/>
+                <CheckBox
+                    android:id="@+id/wine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/wine"
+                    android:textSize="@dimen/text" />
 
-            <CheckBox
-                android:id="@+id/civilisation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/left_indent"
-                android:paddingRight="@dimen/left_indent"
-                android:text="@string/civilisation"
-                android:textSize="@dimen/text"/>
+                <CheckBox
+                    android:id="@+id/civilisation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/civilisation"
+                    android:textSize="@dimen/text" />
 
-            <CheckBox
-                android:id="@+id/empires"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/left_indent"
-                android:paddingRight="@dimen/left_indent"
-                android:text="@string/empires"
-                android:textSize="@dimen/text"/>
+                <CheckBox
+                    android:id="@+id/empires"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/left_indent"
+                    android:paddingRight="@dimen/left_indent"
+                    android:text="@string/empires"
+                    android:textSize="@dimen/text" />
 
             </LinearLayout>
 
@@ -107,7 +107,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_dimen"
                 android:text="@string/capital_for_albania"
-                android:layout_gravity="center_horizontal"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
 
@@ -116,9 +115,9 @@
                 android:id="@+id/albania_answers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_dimen"
                 android:layout_marginLeft="@dimen/left_indent"
-                android:layout_marginRight="@dimen/left_indent">
+                android:layout_marginRight="@dimen/left_indent"
+                android:layout_marginTop="@dimen/top_dimen">
 
                 <RadioButton
                     android:id="@+id/albania_zagreb"
@@ -153,7 +152,6 @@
                 android:id="@+id/iceland"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/top_dimen"
                 android:text="@string/capital_for_iceland"
                 android:textColor="@color/text"
@@ -163,9 +161,9 @@
                 android:id="@+id/iceland_answers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_dimen"
                 android:layout_marginLeft="@dimen/left_indent"
-                android:layout_marginRight="@dimen/left_indent">
+                android:layout_marginRight="@dimen/left_indent"
+                android:layout_marginTop="@dimen/top_dimen">
 
                 <RadioButton
                     android:id="@+id/iceland_stockholm"
@@ -200,7 +198,6 @@
                 android:id="@+id/slovakia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/top_dimen"
                 android:text="@string/capital_for_slovakia"
                 android:textColor="@color/text"
@@ -210,9 +207,9 @@
                 android:id="@+id/slovakia_answers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/top_dimen"
                 android:layout_marginLeft="@dimen/left_indent"
-                android:layout_marginRight="@dimen/left_indent">
+                android:layout_marginRight="@dimen/left_indent"
+                android:layout_marginTop="@dimen/top_dimen">
 
                 <RadioButton
                     android:id="@+id/slovakia_bratislava"

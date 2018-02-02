@@ -17,10 +17,11 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // sets layout according to what the user selected on the MainActivity
         final Bundle parameters = getIntent().getExtras();
-        if (parameters != null && parameters.containsKey("layout")){
-            setContentView(parameters.getInt("layout"));}
-        else{
-            setContentView(R.layout.activity_easy);}
+        if (parameters != null && parameters.containsKey("layout")) {
+            setContentView(parameters.getInt("layout"));
+        } else {
+            setContentView(R.layout.activity_easy);
+        }
         Button btnSubmit = (Button) findViewById(R.id.btnSubmit);
         final int layoutId = parameters.getInt("layout");
 
@@ -49,7 +50,7 @@ public class QuizActivity extends AppCompatActivity {
                         }
                         startActivity(intent);
                     }
-                }else {
+                } else {
                     int finalScore = calculatePointsEasy();
 
                     if (parameters != null) {
@@ -70,8 +71,6 @@ public class QuizActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 }
-
-
 
 
             }
@@ -96,10 +95,10 @@ public class QuizActivity extends AppCompatActivity {
 
         // Check which checkbox was clicked
         if ((((CheckBox) findViewById(R.id.wine)).isChecked()) &&
-                        (((CheckBox) findViewById(R.id.empires)).isChecked()) &&
-                        (((CheckBox) findViewById(R.id.civilisation)).isChecked())) {
-                score += 1;
-            }
+                (((CheckBox) findViewById(R.id.empires)).isChecked()) &&
+                (((CheckBox) findViewById(R.id.civilisation)).isChecked())) {
+            score += 1;
+        }
 
         //checks if the user answered correct the first question
         if (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) {

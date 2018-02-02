@@ -27,14 +27,14 @@
             android:id="@+id/name_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/top_dimen"
             android:layout_marginLeft="@dimen/left_indent"
             android:layout_marginRight="@dimen/left_indent"
+            android:layout_marginTop="@dimen/top_dimen"
             android:gravity="center_horizontal"
-            android:inputType="textCapWords"
-            android:imeOptions="actionDone"
             android:hint="@string/name_input"
-            android:textColorHint="@color/text"/>
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:textColorHint="@color/text" />
 
         <TextView
             android:id="@+id/continent"

@@ -24,22 +24,21 @@
 
             <TextView
                 android:id="@+id/receiveName"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/win"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/top_dp"
                 android:text=""
                 android:textColor="@color/text"
-                android:textSize="@dimen/text"
-                />
+                android:textSize="@dimen/text" />
 
             <TextView
                 android:id="@+id/ending"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/receiveName"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/top_dp"
                 android:text=""
                 android:textColor="@color/text"
@@ -47,11 +46,11 @@
 
             <TextView
                 android:id="@+id/percent"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_below="@id/ending"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/top_dp"
                 android:text=""
                 android:textColor="@color/text"
@@ -66,7 +65,7 @@
             android:layout_marginTop="@dimen/top_dp"
             android:onClick="reset"
             android:text="@string/restart"
-            android:textSize="@dimen/text"/>
+            android:textSize="@dimen/text" />
 
     </LinearLayout>
 </ScrollView>

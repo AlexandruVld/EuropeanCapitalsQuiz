@@ -28,30 +28,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long row_id) {
         //Defines which activity starts according to what the user is selecting
-            EditText name = (EditText)findViewById(R.id.name_input);
+        EditText name = (EditText) findViewById(R.id.name_input);
 
-            Intent intent;
-            switch (position) {
-                case 1:
-                    Toast.makeText(this, getString(R.string.heavy_stuff), Toast.LENGTH_LONG).show();
-                    intent = new Intent(MainActivity.this, QuizActivity.class);
-                    intent.putExtra("layout", R.layout.activity_basic_quiz);
-                    intent.putExtra("name", name.getText().toString());
-                    startActivity(intent);
-                    break;
+        Intent intent;
+        switch (position) {
+            case 1:
+                Toast.makeText(this, getString(R.string.heavy_stuff), Toast.LENGTH_LONG).show();
+                intent = new Intent(MainActivity.this, QuizActivity.class);
+                intent.putExtra("layout", R.layout.activity_basic_quiz);
+                intent.putExtra("name", name.getText().toString());
+                startActivity(intent);
+                break;
 
-                case 2:
-                    Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
-                    intent = new Intent(MainActivity.this, QuizActivity.class);
-                    intent.putExtra("layout", R.layout.activity_easy);
-                    intent.putExtra("name", name.getText().toString());
-                    startActivity(intent);
-                    break;
+            case 2:
+                Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
+                intent = new Intent(MainActivity.this, QuizActivity.class);
+                intent.putExtra("layout", R.layout.activity_easy);
+                intent.putExtra("name", name.getText().toString());
+                startActivity(intent);
+                break;
 
-                default:
-                    Toast.makeText(this, getString(R.string.please_select), Toast.LENGTH_LONG).show();
-                    break;
-            }
+            default:
+                Toast.makeText(this, getString(R.string.please_select), Toast.LENGTH_LONG).show();
+                break;
+        }
 
 
     }
