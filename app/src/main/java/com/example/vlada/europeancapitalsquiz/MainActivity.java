@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     intent.putExtra("name", name.getText().toString());
                     startActivity(intent);
                     break;
+
                 default:
                     Toast.makeText(this, getString(R.string.please_select), Toast.LENGTH_LONG).show();
                     break;

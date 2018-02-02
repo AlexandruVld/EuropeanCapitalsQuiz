@@ -13,39 +13,67 @@ public class QuizActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // sets layout according to what the user selected on the MainActivity
         final Bundle parameters = getIntent().getExtras();
-        if (parameters != null && parameters.containsKey("layout"))
-            setContentView(parameters.getInt("layout"));
-        else
-            setContentView(R.layout.activity_basic_quiz);
+        if (parameters != null && parameters.containsKey("layout")){
+            setContentView(parameters.getInt("layout"));}
+        else{
+            setContentView(R.layout.activity_easy);}
         Button btnSubmit = (Button) findViewById(R.id.btnSubmit);
+        final int layoutId = parameters.getInt("layout");
 
         // starts Ending activity
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int finalScore = calculatePoints();
 
-                if (parameters != null) {
-                    String data = parameters.getString("name");
-                    Intent intent = new Intent(QuizActivity.this, EndingActivity.class);
-                    intent.putExtra("name", data);
-                    intent.putExtra("finalScore", finalScore);
+                if (layoutId == R.layout.activity_basic_quiz) {
+                    int finalScore = calculatePoints();
 
-                    //defines what will be displayed in the EndingActivity
-                    if (finalScore > 2) {
-                        intent.putExtra("finalTxt", getText(R.string.win).toString());
+                    if (parameters != null) {
+                        String data = parameters.getString("name");
+                        Intent intent = new Intent(QuizActivity.this, EndingActivity.class);
+                        intent.putExtra("name", data);
+                        intent.putExtra("finalScore", finalScore);
+
+                        //defines what will be displayed in the EndingActivity
+                        if (finalScore > 2) {
+                            intent.putExtra("finalTxt", getText(R.string.win).toString());
+                        }
+                        //defines what will be displayed in the EndingActivity
+                        else {
+                            intent.putExtra("finalTxt", getText(R.string.loser).toString());
+                            intent.putExtra("image", R.drawable.looser);
+                        }
+                        startActivity(intent);
                     }
-                    //defines what will be displayed in the EndingActivity
-                    else {
-                        intent.putExtra("finalTxt", getText(R.string.loser).toString());
-                        intent.putExtra("image", R.drawable.looser);
+                }else {
+                    int finalScore = calculatePointsEasy();
+
+                    if (parameters != null) {
+                        String data = parameters.getString("name");
+                        Intent intent = new Intent(QuizActivity.this, EndingActivity.class);
+                        intent.putExtra("name", data);
+                        intent.putExtra("finalScore", finalScore);
+
+                        //defines what will be displayed in the EndingActivity
+                        if (finalScore > 2) {
+                            intent.putExtra("finalTxt", getText(R.string.win).toString());
+                        }
+                        //defines what will be displayed in the EndingActivity
+                        else {
+                            intent.putExtra("finalTxt", getText(R.string.loser).toString());
+                            intent.putExtra("image", R.drawable.looser);
+                        }
+                        startActivity(intent);
                     }
-                    startActivity(intent);
                 }
+
+
+
+
             }
         });
 
@@ -58,6 +86,40 @@ public class QuizActivity extends AppCompatActivity {
 
     public int calculatePoints() {
 
+        //initial value of the points
+        int score = 0;
+        EditText answer = (EditText) findViewById(R.id.answer);
+
+        if (answer.getText().toString().contentEquals(getString(R.string.basic_answer))) {
+            score += 1;
+        }
+
+        // Check which checkbox was clicked
+        if ((((CheckBox) findViewById(R.id.wine)).isChecked()) &&
+                        (((CheckBox) findViewById(R.id.empires)).isChecked()) &&
+                        (((CheckBox) findViewById(R.id.civilisation)).isChecked())) {
+                score += 1;
+            }
+
+        //checks if the user answered correct the first question
+        if (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) {
+            score += 1;
+        }
+
+        //checks if the user answered correct the second question
+        if (((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) {
+            score += 1;
+        }
+
+        //checks if the user answered correct the third question
+        if (((RadioButton) findViewById(R.id.slovakia_bratislava)).isChecked()) {
+            score += 1;
+        }
+
+        return score;
+    }
+
+    public int calculatePointsEasy() {
 
         //initial value of the points
         int score = 0;
@@ -67,15 +129,7 @@ public class QuizActivity extends AppCompatActivity {
             score += 1;
         }
 
-        if (answer.getText().toString().contentEquals(getString(R.string.basic_answer))) {
-            score += 1;
-        }
-
-        if ((((CheckBox) findViewById(R.id.wine)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.empires)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.civilisation)).isChecked())) {
-            score += 1;
-        }
+        // Check which checkbox was clicked
 
         if ((((CheckBox) findViewById(R.id.countries)).isChecked()) &&
                 (((CheckBox) findViewById(R.id.smallest)).isChecked()) &&
@@ -84,27 +138,18 @@ public class QuizActivity extends AppCompatActivity {
         }
 
         //checks if the user answered correct the first question
-        if (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) {
-            score += 1;
-        }
 
         if (((RadioButton) findViewById(R.id.france_paris)).isChecked()) {
             score += 1;
         }
 
         //checks if the user answered correct the second question
-        if (((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) {
-            score += 1;
-        }
 
         if (((RadioButton) findViewById(R.id.germany_berlin)).isChecked()) {
             score += 1;
         }
 
         //checks if the user answered correct the third question
-        if (((RadioButton) findViewById(R.id.slovakia_bratislava)).isChecked()) {
-            score += 1;
-        }
 
         if (((RadioButton) findViewById(R.id.england_london)).isChecked()) {
             score += 1;
