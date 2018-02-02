@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Main Activity strings-->
+    <string name="app_name">European Capitals Quiz</string>
+    <string name="welcome" translatable="false">European Capitals Quiz</string>
+    <string name="name_input">Va rog sa completati numele!</string>
+    <string name="hint">Nume</string>
+    <string name="please_select">Va rog sa selectati locatia!</string>
+    <string name="spinner">Selectati continentul pe care traiti</string>
+
+    <!--Activity Basic Quiz strings-->
+    <string name="smallest_state">Care este cea mai mica tara din Europa</string>
+    <string name="true_statement">Care din urmatoarele declaratii sunt adevarate?</string>
+    <string name="wine">Europa produce 44% din productia totala de vin</string>
+    <string name="empires">Primul razboi mondial a incheiat patru imperii</string>
+    <string name="civilisation">Europa a dat nastere civilizatiei vestice</string>
+    <string name="name">Numele Europa provine din latina</string>
+    <string name="capital_for_albania">Care este capitala Albaniei?</string>
+    <string name="albania_answer_1">Zagreb</string>
+    <string name="albania_answer_2">Tirana</string>
+    <string name="albania_answer_3">Tibilisi</string>
+    <string name="capital_for_iceland">Care este capitala Islandei?</string>
+    <string name="iceland_answer_1">Stockholm</string>
+    <string name="iceland_answer_2">Helsinki</string>
+    <string name="iceland_answer_3">Reykjavik</string>
+    <string name="capital_for_slovakia">Care este capitala Slovaciei?</string>
+    <string name="slovakia_answer_1">Bratislava</string>
+    <string name="slovakia_answer_2">Ljubljana</string>
+    <string name="slovakia_answer_3">Belgrade</string>
+    <string name="answer_c">Raspunsul C</string>
+
+    <!--Quiz Activity Easy strings-->
+    <string name="european_parliament">Ce capitala gazduieste Parlamentul European?</string>
+    <string name="christian">In Europa majoritari sunt Hindusii</string>
+    <string name="countries">Pe continentul European sunt 50 de tari</string>
+    <string name="economy">Europa are cea mai bogata economie</string>
+    <string name="smallest">In Europa se afla cea mai mica tara din lume</string>
+    <string name="capital_for_france">Care este capitala Frantei</string>
+    <string name="france_answer_1">Paris</string>
+    <string name="france_answer_2">Bucuresti</string>
+    <string name="france_answer_3">Praga</string>
+    <string name="capital_for_germany">Care este capitala Germaniei?</string>
+    <string name="germany_answer_1">Dublin</string>
+    <string name="germany_answer_2">Berlin</string>
+    <string name="germany_answer_3">Roma</string>
+    <string name="capital_for_uk">Care este capitala Angliei?</string>
+    <string name="uk_answer_1">Atena</string>
+    <string name="uk_answer_2">Madrid</string>
+    <string name="uk_answer_3">Londra</string>
+
+    <!--Win & Loose Activity strings-->
+    <string name="win">Felicitari!</string>
+    <string name="loser">Poate data viitoare!</string>
+
+    <!--Button strings-->
+    <string name="restart">Restart</string>
+    <string name="submit">Trimite</string>
+
+    <!--Toast messages-->
+    <string name="heavy_stuff">Pentru ca esti European vom trece la lucruile grele!</string>
+    <string name="easy">Am sa te iau mai usor!</string>
+
+    <!--Continents-->
+    <string name="select">Selecteaza</string>
+    <string name="cont_eu">Europa</string>
+    <string name="world">Restul lumii</string>
+
+    <!--Answers hint-->
+    <string name="answer">Va rog sa completati raspunsul aici!</string>
+    <string name="easy_answer">Bruxelles</string>
+    <string name="basic_answer">Vatican</string>
+</resources>
