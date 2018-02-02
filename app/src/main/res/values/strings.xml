@@ -1,10 +1,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--Main Activity strings-->
     <string name="app_name">European Capitals Quiz</string>
-    <string name="wellcome">European Capitals Quiz</string>
+    <string name="welcome">European Capitals Quiz</string>
     <string name="name_input">Please fill in your name!</string>
     <string name="hint">Name</string>
-    <string name="please_select">Plese select your location!</string>
+    <string name="please_select">Please select your location!</string>
     <string name="spinner">Choose the continent that you live on</string>
 
 
@@ -30,7 +30,7 @@
     <string name="answer_c">Answer C</string>
 
     <!--Quiz Activity Easy strings-->
-    <string name="european_parliament">Which capital is home of the European Parlament?</string>
+    <string name="european_parliament">Which capital is home of the European Parliament?</string>
     <string name="christian">Europe Has a Hindu Majority</string>
     <string name="countries">There Are 50 Countries in Europe</string>
     <string name="economy">Europe Has the World\’s Richest Economy</string>
@@ -48,7 +48,7 @@
     <string name="uk_answer_2">Madrid</string>
     <string name="uk_answer_3">London</string>
 
-    <!--Win & Loose Ativity strings-->
+    <!--Win & Loose Activity strings-->
     <string name="win">Congratulation!</string>
     <string name="loser">Better luck next time!</string>
     <string name="restart">Restart</string>
@@ -60,7 +60,6 @@
     <!--Toast messages-->
     <string name="heavy_stuff">Since you are a European we\'ll go for the heavy stuff!</string>
     <string name="easy">I\'ll go easy on you!</string>
-    <string name="result">On a scale of 1 to 5 you scored: <xliff:g id="finalScore" example="1">%d</xliff:g>!</string>
 
 
 

@@ -76,8 +76,19 @@ public class QuizActivity extends AppCompatActivity {
                 (((CheckBox) findViewById(R.id.civilisation)).isChecked())) {
             score += 1;
         }
+
+        if ((((CheckBox) findViewById(R.id.countries)).isChecked()) &&
+                (((CheckBox) findViewById(R.id.smallest)).isChecked()) &&
+                (((CheckBox) findViewById(R.id.economy)).isChecked())) {
+            score += 1;
+        }
+
         //checks if the user answered correct the first question
         if (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) {
+            score += 1;
+        }
+
+        if (((RadioButton) findViewById(R.id.france_paris)).isChecked()) {
             score += 1;
         }
 
@@ -86,8 +97,16 @@ public class QuizActivity extends AppCompatActivity {
             score += 1;
         }
 
+        if (((RadioButton) findViewById(R.id.germany_berlin)).isChecked()) {
+            score += 1;
+        }
+
         //checks if the user answered correct the third question
         if (((RadioButton) findViewById(R.id.slovakia_bratislava)).isChecked()) {
+            score += 1;
+        }
+
+        if (((RadioButton) findViewById(R.id.england_london)).isChecked()) {
             score += 1;
         }
 

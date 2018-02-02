@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/top_dp"
             android:gravity="center_horizontal"
-            android:text="@string/wellcome"
+            android:text="@string/welcome"
             android:textColor="@color/text"
             android:textSize="@dimen/text_title" />
 
