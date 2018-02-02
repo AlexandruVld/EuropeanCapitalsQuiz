@@ -51,7 +51,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_dimen"
-                android:layout_gravity="center_horizontal"
                 android:text="@string/true_statement"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
@@ -103,17 +102,16 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/albania"
+                android:id="@+id/france"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_dimen"
-                android:layout_gravity="center_horizontal"
                 android:text="@string/capital_for_france"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
 
                 <RadioGroup
-                    android:id="@+id/albania_answers"
+                    android:id="@+id/france_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/top_dimen"
@@ -149,11 +147,10 @@
                 </RadioGroup>
 
             <TextView
-                android:id="@+id/iceland"
+                android:id="@+id/germany"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_dimen"
-                android:layout_gravity="center_horizontal"
                 android:text="@string/capital_for_germany"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text" />
@@ -195,10 +192,8 @@
 
                 </RadioGroup>
 
-            </LinearLayout>
-
             <TextView
-                android:id="@+id/slovakia"
+                android:id="@+id/england"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/top_dimen"
@@ -208,7 +203,7 @@
                 android:textSize="@dimen/text" />
 
                 <RadioGroup
-                    android:id="@+id/uk_answers"
+                    android:id="@+id/england_answers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/top_dimen"
@@ -243,6 +238,7 @@
                         android:textSize="@dimen/text" />
 
                 </RadioGroup>
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnSubmit"
@@ -255,6 +251,8 @@
             android:textSize="@dimen/text" />
 
 
-    </LinearLayout>
+
+     </LinearLayout>
 
 </ScrollView>
+
