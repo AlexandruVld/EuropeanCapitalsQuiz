@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Spinner spin = (Spinner) findViewById(R.id.continents_spinner);
+        Spinner spin = findViewById(R.id.continents_spinner);
         spin.setOnItemSelectedListener(this);
         String[] continents = getResources().getStringArray(R.array.continents_array);
         ArrayAdapter<String> continentChooser = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, continents);
@@ -26,13 +26,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //Performing action onItemSelected and onNothing selected
     @Override
-    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long row_id) {
+    public void onItemSelected(AdapterView<?> spinner, View item, int position, long row_id) {
         //Defines which activity starts according to what the user is selecting
-        EditText name = (EditText) findViewById(R.id.name_input);
+        EditText name = findViewById(R.id.name_input);
 
         Intent intent;
         switch (position) {
             case 1:
+                if (name.getText().toString().isEmpty()) {
+                    Toast.makeText(this, R.string.name_input, Toast.LENGTH_LONG).show();
+                    spinner.setSelection(0);
+                    break;
+                }
                 Toast.makeText(this, getString(R.string.heavy_stuff), Toast.LENGTH_LONG).show();
                 intent = new Intent(MainActivity.this, QuizActivity.class);
                 intent.putExtra("layout", R.layout.activity_basic_quiz);
@@ -41,6 +46,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
 
             case 2:
+                if (name.getText().toString().isEmpty()) {
+                    Toast.makeText(this, R.string.name_input, Toast.LENGTH_LONG).show();
+                    spinner.setSelection(0);
+                    break;
+                }
                 Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
                 intent = new Intent(MainActivity.this, QuizActivity.class);
                 intent.putExtra("layout", R.layout.activity_easy);
@@ -49,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
 
             default:
-                Toast.makeText(this, getString(R.string.please_select), Toast.LENGTH_LONG).show();
                 break;
         }
 

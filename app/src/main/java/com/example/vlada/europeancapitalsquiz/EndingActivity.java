@@ -26,11 +26,13 @@ public class EndingActivity extends AppCompatActivity {
         if (bundle != null) {
             String data = bundle.getString("name");
             int finalScore = bundle.getInt("finalScore");
+            int percentage = (finalScore * 100) / 5;
             String finalTxt = bundle.getString("finalTxt");
             int imgEnding = getIntent().getIntExtra("image", R.drawable.winner);
             name.setText(data);
             textScore.setText(finalTxt);
-            percent.setText("Final score: " + finalScore + "/5 ( " + ((finalScore * 100) / 5) + "% )");
+            percent.setText(getString(R.string.score) + finalScore + getString(R.string.from) +
+                    percentage + getString(R.string.end_line));
             image.setImageResource(imgEnding);
         }
 

@@ -1,7 +1,7 @@
 <resources>
     <!--Main Activity strings-->
     <string name="app_name">European Capitals Quiz</string>
-    <string name="welcome" translatable="false">European Capitals Quiz</string>
+    <string name="welcome">European Capitals Quiz</string>
     <string name="name_input">Please fill in your name!</string>
     <string name="hint">Name</string>
     <string name="please_select">Please select your location!</string>
@@ -40,7 +40,7 @@
     <string name="capital_for_germany">What is the capital of Germany?</string>
     <string name="germany_answer_1">Dublin</string>
     <string name="germany_answer_2">Berlin</string>
-    <string name="germany_answer_3" translatable="false">Rome</string>
+    <string name="germany_answer_3">Rome</string>
     <string name="capital_for_uk">What is the capital of England?</string>
     <string name="uk_answer_1">Athens</string>
     <string name="uk_answer_2">Madrid</string>
@@ -57,6 +57,7 @@
     <!--Toast messages-->
     <string name="heavy_stuff">Since you are a European we\'ll go for the heavy stuff!</string>
     <string name="easy">I\'ll go easy on you!</string>
+    <string name="answers">You have to answer all the questions in the quiz!</string>
 
 
 
@@ -70,5 +71,9 @@
     <string name="answer">Please fill your answer here!</string>
     <string name="easy_answer">Brussels </string>
     <string name="basic_answer">Vatican</string>
+
+    <string name="score">Final score: </string>
+    <string name="from">/5 ( </string>
+    <string name="end_line">% )</string>
 
 </resources>

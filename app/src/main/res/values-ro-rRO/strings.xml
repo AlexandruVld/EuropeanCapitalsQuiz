@@ -2,14 +2,14 @@
 <resources>
     <!--Main Activity strings-->
     <string name="app_name">European Capitals Quiz</string>
-    <string name="welcome" translatable="false">European Capitals Quiz</string>
+    <string name="welcome">Test Capitale Europene</string>
     <string name="name_input">Va rog sa completati numele!</string>
     <string name="hint">Nume</string>
     <string name="please_select">Va rog sa selectati locatia!</string>
     <string name="spinner">Selectati continentul pe care traiti</string>
 
     <!--Activity Basic Quiz strings-->
-    <string name="smallest_state">Care este cea mai mica tara din Europa</string>
+    <string name="smallest_state">Care este cea mai mica tara din Europa?</string>
     <string name="true_statement">Care din urmatoarele declaratii sunt adevarate?</string>
     <string name="wine">Europa produce 44% din productia totala de vin</string>
     <string name="empires">Primul razboi mondial a incheiat patru imperii</string>
@@ -35,7 +35,7 @@
     <string name="countries">Pe continentul European sunt 50 de tari</string>
     <string name="economy">Europa are cea mai bogata economie</string>
     <string name="smallest">In Europa se afla cea mai mica tara din lume</string>
-    <string name="capital_for_france">Care este capitala Frantei</string>
+    <string name="capital_for_france">Care este capitala Frantei?</string>
     <string name="france_answer_1">Paris</string>
     <string name="france_answer_2">Bucuresti</string>
     <string name="france_answer_3">Praga</string>
@@ -69,4 +69,6 @@
     <string name="answer">Va rog sa completati raspunsul aici!</string>
     <string name="easy_answer">Bruxelles</string>
     <string name="basic_answer">Vatican</string>
+    <string name="answers">Trebuie sa respundeti la toate intrebarile din test!</string>
+    <string name="score">Scor final: </string>
 </resources>

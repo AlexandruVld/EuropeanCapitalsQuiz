@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -20,97 +21,75 @@ public class QuizActivity extends AppCompatActivity {
         if (parameters != null && parameters.containsKey("layout")) {
             setContentView(parameters.getInt("layout"));
         } else {
-            setContentView(R.layout.activity_easy);
+            this.finish();
         }
-        Button btnSubmit = (Button) findViewById(R.id.btnSubmit);
+        Button btnSubmit = findViewById(R.id.btnSubmit);
         final int layoutId = parameters.getInt("layout");
 
         // starts Ending activity
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //checks if the user answered all the questions
+                boolean questionsAnswered = (layoutId == R.layout.activity_basic_quiz) ?
+                        checkAllQuestionsBasicAnswered() : checkAllQuestionsEasyAnswered();
 
-                if (layoutId == R.layout.activity_basic_quiz) {
-                    int finalScore = calculatePoints();
+                if (questionsAnswered) {
+                    //defines the score according to the layout and gets specific method for the layout
+                    int finalScore = (layoutId == R.layout.activity_basic_quiz) ? getPoints() : getPointsEasy();
+                    Intent intent = new Intent(QuizActivity.this, EndingActivity.class);
+                    intent.putExtra("name", parameters.getString("name"));
+                    intent.putExtra("finalScore", finalScore);
 
-                    if (parameters != null) {
-                        String data = parameters.getString("name");
-                        Intent intent = new Intent(QuizActivity.this, EndingActivity.class);
-                        intent.putExtra("name", data);
-                        intent.putExtra("finalScore", finalScore);
-
-                        //defines what will be displayed in the EndingActivity
-                        if (finalScore > 2) {
-                            intent.putExtra("finalTxt", getText(R.string.win).toString());
-                        }
-                        //defines what will be displayed in the EndingActivity
-                        else {
-                            intent.putExtra("finalTxt", getText(R.string.loser).toString());
-                            intent.putExtra("image", R.drawable.looser);
-                        }
-                        startActivity(intent);
+                    //defines what will be displayed in the EndingActivity
+                    if (finalScore > 2) {
+                        intent.putExtra("finalTxt", getText(R.string.win).toString());
                     }
+                    //defines what will be displayed in the EndingActivity
+                    else {
+                        intent.putExtra("finalTxt", getText(R.string.loser).toString());
+                        intent.putExtra("image", R.drawable.looser);
+                    }
+                    startActivity(intent);
                 } else {
-                    int finalScore = calculatePointsEasy();
-
-                    if (parameters != null) {
-                        String data = parameters.getString("name");
-                        Intent intent = new Intent(QuizActivity.this, EndingActivity.class);
-                        intent.putExtra("name", data);
-                        intent.putExtra("finalScore", finalScore);
-
-                        //defines what will be displayed in the EndingActivity
-                        if (finalScore > 2) {
-                            intent.putExtra("finalTxt", getText(R.string.win).toString());
-                        }
-                        //defines what will be displayed in the EndingActivity
-                        else {
-                            intent.putExtra("finalTxt", getText(R.string.loser).toString());
-                            intent.putExtra("image", R.drawable.looser);
-                        }
-                        startActivity(intent);
-                    }
+                    Toast.makeText(getApplicationContext(), getString(R.string.answer), Toast.LENGTH_LONG).show();
                 }
-
-
             }
         });
 
     }
 
-    /*@param checkedReykjavik is wether the user checked the corect answer
-     *@param checkedTirana is wether the user checked the corect answer
-     *@param checkedBratislava is wether the user checked the corect answer
-    */
-
-    public int calculatePoints() {
+    //gets points according to the answers for activity_basic_quiz layout
+    public int getPoints() {
 
         //initial value of the points
         int score = 0;
-        EditText answer = (EditText) findViewById(R.id.answer);
+        EditText answer = findViewById(R.id.answer);
 
+        //adds point if user inputs the correct answer
         if (answer.getText().toString().contentEquals(getString(R.string.basic_answer))) {
             score += 1;
         }
 
-        // Check which checkbox was clicked
+        //adds point if user selected correct answers
         if ((((CheckBox) findViewById(R.id.wine)).isChecked()) &&
                 (((CheckBox) findViewById(R.id.empires)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.civilisation)).isChecked())) {
+                (((CheckBox) findViewById(R.id.civilisation)).isChecked()) &&
+                (!((CheckBox) findViewById(R.id.name)).isChecked())) {
             score += 1;
         }
 
-        //checks if the user answered correct the first question
+        //adds point if user selected correct answer
         if (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) {
             score += 1;
         }
 
-        //checks if the user answered correct the second question
+        //adds point if user selected correct answer
         if (((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) {
             score += 1;
         }
 
-        //checks if the user answered correct the third question
+        //adds point if user selected correct answer
         if (((RadioButton) findViewById(R.id.slovakia_bratislava)).isChecked()) {
             score += 1;
         }
@@ -118,42 +97,80 @@ public class QuizActivity extends AppCompatActivity {
         return score;
     }
 
-    public int calculatePointsEasy() {
+    //gets points according to the answers for activity_easy layout
+    public int getPointsEasy() {
 
         //initial value of the points
         int score = 0;
-        EditText answer = (EditText) findViewById(R.id.answer);
+        EditText answer = findViewById(R.id.answer);
 
+        //adds point if user inputs the correct answer
         if (answer.getText().toString().contentEquals(getString(R.string.easy_answer))) {
             score += 1;
         }
 
-        // Check which checkbox was clicked
-
+        //adds point if user selected correct answers
         if ((((CheckBox) findViewById(R.id.countries)).isChecked()) &&
                 (((CheckBox) findViewById(R.id.smallest)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.economy)).isChecked())) {
+                (((CheckBox) findViewById(R.id.economy)).isChecked()) &&
+                (!((CheckBox) findViewById(R.id.christian)).isChecked())) {
             score += 1;
         }
 
-        //checks if the user answered correct the first question
-
+        //adds point if user selected correct answer
         if (((RadioButton) findViewById(R.id.france_paris)).isChecked()) {
             score += 1;
         }
 
-        //checks if the user answered correct the second question
-
+        //adds point if user selected correct answer
         if (((RadioButton) findViewById(R.id.germany_berlin)).isChecked()) {
             score += 1;
         }
 
-        //checks if the user answered correct the third question
-
+        //adds point if user selected correct answer
         if (((RadioButton) findViewById(R.id.england_london)).isChecked()) {
             score += 1;
         }
 
         return score;
+    }
+
+    //checks if all teh questions ware answered from activity_basic_quiz layout
+    public boolean checkAllQuestionsBasicAnswered() {
+
+        return ((((CheckBox) findViewById(R.id.wine)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.empires)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.civilisation)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.name)).isChecked())) &&
+                ((((RadioButton) findViewById(R.id.albania_tibilisi)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.albania_tibilisi)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.albania_zagreb)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.iceland_helsinki)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.iceland_stockholm)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.slovakia_belgrade)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.slovakia_bratislava)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.slovakia_ljublijana)).isChecked()));
+
+    }
+
+    //checks if all teh questions ware answered from activity_easy layout
+    public boolean checkAllQuestionsEasyAnswered() {
+
+        return ((((CheckBox) findViewById(R.id.countries)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.smallest)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.economy)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.christian)).isChecked())) &&
+                ((((RadioButton) findViewById(R.id.france_paris)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.france_bucharest)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.france_prague)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.germany_berlin)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.germany_dublin)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.germany_rome)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.england_london)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.england_athens)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.england_madrid)).isChecked()));
+
     }
 }
