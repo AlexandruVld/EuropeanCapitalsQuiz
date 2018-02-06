@@ -52,7 +52,7 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     startActivity(intent);
                 } else {
-                    Toast.makeText(getApplicationContext(), getString(R.string.answer), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.all_questions), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -144,7 +144,6 @@ public class QuizActivity extends AppCompatActivity {
                 (((CheckBox) findViewById(R.id.name)).isChecked())) &&
                 ((((RadioButton) findViewById(R.id.albania_tibilisi)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.albania_tibilisi)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.albania_zagreb)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.iceland_helsinki)).isChecked()) ||

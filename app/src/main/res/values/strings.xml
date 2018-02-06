@@ -57,11 +57,9 @@
     <!--Toast messages-->
     <string name="heavy_stuff">Since you are a European we\'ll go for the heavy stuff!</string>
     <string name="easy">I\'ll go easy on you!</string>
-    <string name="answers">You have to answer all the questions in the quiz!</string>
+    <string name="all_questions">You have to answer all the questions in the quiz!</string>
 
-
-
-    <!--Continents-->
+    <!--Spinner-->
     <string name="select">Select</string>
     <string name="cont_eu">Europe</string>
     <string name="world">Rest of the world</string>
@@ -69,7 +67,7 @@
 
     <!--Answers hint-->
     <string name="answer">Please fill your answer here!</string>
-    <string name="easy_answer">Brussels </string>
+    <string name="easy_answer">Brussels</string>
     <string name="basic_answer">Vatican</string>
 
     <string name="score">Final score: </string>
