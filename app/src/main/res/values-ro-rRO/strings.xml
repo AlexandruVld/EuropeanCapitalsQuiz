@@ -69,6 +69,6 @@
     <string name="answer">Va rog sa completati raspunsul aici!</string>
     <string name="easy_answer">Bruxelles</string>
     <string name="basic_answer">Vatican</string>
-    <string name="answers">Trebuie sa respundeti la toate intrebarile din test!</string>
+    <string name="all_questions">Trebuie sa respundeti la toate intrebarile din test!</string>
     <string name="score">Scor final: </string>
 </resources>

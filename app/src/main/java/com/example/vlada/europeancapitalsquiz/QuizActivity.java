@@ -142,15 +142,15 @@ public class QuizActivity extends AppCompatActivity {
                 (((CheckBox) findViewById(R.id.empires)).isChecked()) ||
                 (((CheckBox) findViewById(R.id.civilisation)).isChecked()) ||
                 (((CheckBox) findViewById(R.id.name)).isChecked())) &&
-                ((((RadioButton) findViewById(R.id.albania_tibilisi)).isChecked()) ||
+                (((((RadioButton) findViewById(R.id.albania_tibilisi)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.albania_zagreb)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.albania_zagreb)).isChecked())) &&
+                ((((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.iceland_helsinki)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.iceland_stockholm)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.slovakia_belgrade)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.iceland_stockholm)).isChecked())) &&
+                ((((RadioButton) findViewById(R.id.slovakia_belgrade)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.slovakia_bratislava)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.slovakia_ljublijana)).isChecked()));
+                (((RadioButton) findViewById(R.id.slovakia_ljublijana)).isChecked())));
 
     }
 
@@ -161,15 +161,15 @@ public class QuizActivity extends AppCompatActivity {
                 (((CheckBox) findViewById(R.id.smallest)).isChecked()) ||
                 (((CheckBox) findViewById(R.id.economy)).isChecked()) ||
                 (((CheckBox) findViewById(R.id.christian)).isChecked())) &&
-                ((((RadioButton) findViewById(R.id.france_paris)).isChecked()) ||
+                (((((RadioButton) findViewById(R.id.france_paris)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.france_bucharest)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.france_prague)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.germany_berlin)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.france_prague)).isChecked())) &&
+                ((((RadioButton) findViewById(R.id.germany_berlin)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.germany_dublin)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.germany_rome)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.england_london)).isChecked()) ||
+                (((RadioButton) findViewById(R.id.germany_rome)).isChecked())) &&
+                ((((RadioButton) findViewById(R.id.england_london)).isChecked()) ||
                 (((RadioButton) findViewById(R.id.england_athens)).isChecked()) ||
-                (((RadioButton) findViewById(R.id.england_madrid)).isChecked()));
+                (((RadioButton) findViewById(R.id.england_madrid)).isChecked())));
 
     }
 }
