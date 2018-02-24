@@ -135,7 +135,7 @@ public class QuizActivity extends AppCompatActivity {
         return score;
     }
 
-    //checks if all teh questions ware answered from activity_basic_quiz layout
+    //checks if all the questions ware answered from activity_basic_quiz layout
     public boolean checkAllQuestionsBasicAnswered() {
 
         return ((((CheckBox) findViewById(R.id.wine)).isChecked()) ||
@@ -154,7 +154,7 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    //checks if all teh questions ware answered from activity_easy layout
+    //checks if all the questions ware answered from activity_easy layout
     public boolean checkAllQuestionsEasyAnswered() {
 
         return ((((CheckBox) findViewById(R.id.countries)).isChecked()) ||

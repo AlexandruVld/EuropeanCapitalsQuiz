@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Performing action onItemSelected and onNothing selected
     @Override
     public void onItemSelected(AdapterView<?> spinner, View item, int position, long row_id) {
-        //Defines which activity starts according to what the user is selecting
         EditText name = findViewById(R.id.name_input);
 
+        //Defines which activity starts according to what the user is selecting
         Intent intent;
         switch (position) {
             case 1:

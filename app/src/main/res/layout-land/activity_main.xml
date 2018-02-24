@@ -41,9 +41,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/please_select"
+            android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:textSize="@dimen/text_second_title" />
-
+        
         <Spinner
             android:id="@+id/continents_spinner"
             android:layout_width="wrap_content"
