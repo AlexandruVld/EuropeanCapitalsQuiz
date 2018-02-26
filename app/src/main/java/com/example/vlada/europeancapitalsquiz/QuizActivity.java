@@ -36,19 +36,17 @@ public class QuizActivity extends AppCompatActivity {
                 boolean questionsAnswered = (layoutId == R.layout.activity_basic_quiz) ?
                         checkAllQuestionsBasicAnswered() : checkAllQuestionsEasyAnswered();
 
+                //defines the score according to the layout and gets specific method for the layout
                 if (questionsAnswered) {
-                    //defines the score according to the layout and gets specific method for the layout
                     int finalScore = (layoutId == R.layout.activity_basic_quiz) ? getPoints() : getPointsEasy();
                     Intent intent = new Intent(QuizActivity.this, EndingActivity.class);
-                    intent.putExtra("name", parameters.getString("name"));
+                    intent.putExtra("userNameInput", parameters.getString("userNameInput"));
                     intent.putExtra("finalScore", finalScore);
 
                     //defines what will be displayed in the EndingActivity
                     if (finalScore > 2) {
                         intent.putExtra("finalTxt", getText(R.string.win).toString());
-                    }
-                    //defines what will be displayed in the EndingActivity
-                    else {
+                    } else {
                         intent.putExtra("finalTxt", getText(R.string.loser).toString());
                         intent.putExtra("image", R.drawable.looser);
                     }
@@ -62,36 +60,36 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     //gets points according to the answers for activity_basic_quiz layout
-    public int getPoints() {
+    private int getPoints() {
 
         //initial value of the points
         int score = 0;
-        EditText answer = findViewById(R.id.answer);
+        EditText answer = findViewById(R.id.userAnswerInput);
 
-        //adds point if user inputs the correct answer
+        //adds point if user inputs the correct userAnswerInput
         if (answer.getText().toString().contentEquals(getString(R.string.basic_answer))) {
             score += 1;
         }
 
         //adds point if user selected correct answers
-        if ((((CheckBox) findViewById(R.id.wine)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.empires)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.civilisation)).isChecked()) &&
-                (!((CheckBox) findViewById(R.id.name)).isChecked())) {
+        if ((((CheckBox) findViewById(R.id.europeWineProduction)).isChecked()) &&
+                (((CheckBox) findViewById(R.id.wwiEuropeanEmpires)).isChecked()) &&
+                (((CheckBox) findViewById(R.id.westernCivilisationBirth)).isChecked()) &&
+                (!((CheckBox) findViewById(R.id.europeNameFrom)).isChecked())) {
             score += 1;
         }
 
-        //adds point if user selected correct answer
+        //adds point if user selected correct userAnswerInput
         if (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) {
             score += 1;
         }
 
-        //adds point if user selected correct answer
+        //adds point if user selected correct userAnswerInput
         if (((RadioButton) findViewById(R.id.iceland_reykjavik)).isChecked()) {
             score += 1;
         }
 
-        //adds point if user selected correct answer
+        //adds point if user selected correct userAnswerInput
         if (((RadioButton) findViewById(R.id.slovakia_bratislava)).isChecked()) {
             score += 1;
         }
@@ -100,36 +98,36 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     //gets points according to the answers for activity_easy layout
-    public int getPointsEasy() {
+    private int getPointsEasy() {
 
         //initial value of the points
         int score = 0;
-        EditText answer = findViewById(R.id.answer);
+        EditText answer = findViewById(R.id.userAnswerInput);
 
-        //adds point if user inputs the correct answer
+        //adds point if user inputs the correct userAnswerInput
         if (answer.getText().toString().contentEquals(getString(R.string.easy_answer))) {
             score += 1;
         }
 
         //adds point if user selected correct answers
-        if ((((CheckBox) findViewById(R.id.countries)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.smallest)).isChecked()) &&
-                (((CheckBox) findViewById(R.id.economy)).isChecked()) &&
-                (!((CheckBox) findViewById(R.id.christian)).isChecked())) {
+        if ((((CheckBox) findViewById(R.id.numberOfEuropeanCountries)).isChecked()) &&
+                (((CheckBox) findViewById(R.id.europeSmallestCountry)).isChecked()) &&
+                (((CheckBox) findViewById(R.id.worldsRichestEconomy)).isChecked()) &&
+                (!((CheckBox) findViewById(R.id.europeReligion)).isChecked())) {
             score += 1;
         }
 
-        //adds point if user selected correct answer
+        //adds point if user selected correct userAnswerInput
         if (((RadioButton) findViewById(R.id.france_paris)).isChecked()) {
             score += 1;
         }
 
-        //adds point if user selected correct answer
+        //adds point if user selected correct userAnswerInput
         if (((RadioButton) findViewById(R.id.germany_berlin)).isChecked()) {
             score += 1;
         }
 
-        //adds point if user selected correct answer
+        //adds point if user selected correct userAnswerInput
         if (((RadioButton) findViewById(R.id.england_london)).isChecked()) {
             score += 1;
         }
@@ -140,10 +138,10 @@ public class QuizActivity extends AppCompatActivity {
     //checks if all the questions ware answered from activity_basic_quiz layout
     public boolean checkAllQuestionsBasicAnswered() {
 
-        return ((((CheckBox) findViewById(R.id.wine)).isChecked()) ||
-                (((CheckBox) findViewById(R.id.empires)).isChecked()) ||
-                (((CheckBox) findViewById(R.id.civilisation)).isChecked()) ||
-                (((CheckBox) findViewById(R.id.name)).isChecked())) &&
+        return ((((CheckBox) findViewById(R.id.europeWineProduction)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.wwiEuropeanEmpires)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.westernCivilisationBirth)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.europeNameFrom)).isChecked())) &&
                 (((((RadioButton) findViewById(R.id.albania_tibilisi)).isChecked()) ||
                  (((RadioButton) findViewById(R.id.albania_tirana)).isChecked()) ||
                  (((RadioButton) findViewById(R.id.albania_zagreb)).isChecked())) &&
@@ -158,10 +156,10 @@ public class QuizActivity extends AppCompatActivity {
     //checks if all the questions ware answered from activity_easy layout
     public boolean checkAllQuestionsEasyAnswered() {
 
-        return ((((CheckBox) findViewById(R.id.countries)).isChecked()) ||
-                (((CheckBox) findViewById(R.id.smallest)).isChecked()) ||
-                (((CheckBox) findViewById(R.id.economy)).isChecked()) ||
-                (((CheckBox) findViewById(R.id.christian)).isChecked())) &&
+        return ((((CheckBox) findViewById(R.id.numberOfEuropeanCountries)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.europeSmallestCountry)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.worldsRichestEconomy)).isChecked()) ||
+                (((CheckBox) findViewById(R.id.europeReligion)).isChecked())) &&
                 (((((RadioButton) findViewById(R.id.france_paris)).isChecked()) ||
                  (((RadioButton) findViewById(R.id.france_bucharest)).isChecked()) ||
                  (((RadioButton) findViewById(R.id.france_prague)).isChecked())) &&

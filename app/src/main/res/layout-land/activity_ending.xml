@@ -39,17 +39,7 @@
                 android:layout_below="@id/receiveName"
                 android:layout_centerHorizontal="true"
                 android:text="" />
-
-            <TextView
-                android:id="@+id/percent"
-                style="@style/endingLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_below="@id/ending"
-                android:layout_centerHorizontal="true"
-                android:text="" />
-
+            
         </RelativeLayout>
 
         <Button

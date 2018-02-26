@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Performing action onItemSelected and onNothing selected
     @Override
     public void onItemSelected(AdapterView<?> spinner, View item, int position, long row_id) {
-        EditText name = findViewById(R.id.name_input);
+        EditText userNameInput = findViewById(R.id.name_input);
 
         //Defines which activity starts according to what the user is selecting
         Intent intent;
         switch (position) {
             case 1:
-                if (name.getText().toString().isEmpty()) {
+                if (userNameInput.getText().toString().isEmpty()) {
                     Toast.makeText(this, R.string.name_input, Toast.LENGTH_LONG).show();
                     spinner.setSelection(0);
                     break;
@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Toast.makeText(this, getString(R.string.heavy_stuff), Toast.LENGTH_LONG).show();
                 intent = new Intent(MainActivity.this, QuizActivity.class);
                 intent.putExtra("layout", R.layout.activity_basic_quiz);
-                intent.putExtra("name", name.getText().toString());
+                intent.putExtra("userNameInput", userNameInput.getText().toString());
                 startActivity(intent);
                 break;
 
             case 2:
-                if (name.getText().toString().isEmpty()) {
+                if (userNameInput.getText().toString().isEmpty()) {
                     Toast.makeText(this, R.string.name_input, Toast.LENGTH_LONG).show();
                     spinner.setSelection(0);
                     break;
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Toast.makeText(this, getString(R.string.easy), Toast.LENGTH_LONG).show();
                 intent = new Intent(MainActivity.this, QuizActivity.class);
                 intent.putExtra("layout", R.layout.activity_easy);
-                intent.putExtra("name", name.getText().toString());
+                intent.putExtra("userNameInput", userNameInput.getText().toString());
                 startActivity(intent);
                 break;
 
